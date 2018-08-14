@@ -19,7 +19,7 @@ services:
 
   keosd:
     image: eosio/eos-dev
-    command: /opt/eosio/bin/keosd --wallet-dir /opt/eosio/bin/data-dir --http-server-address=0.0.0.0:8900 --http-alias=keosd:8900 --http-alias=localhost:8900 --http-alias=127.0.0.1:8900 --http-validate-host=false
+    command: /opt/eosio/bin/keosd --wallet-dir /opt/eosio/bin/data-dir --http-server-address=0.0.0.0:8900 --http-alias=keosd:8900 --http-alias=localhost:8900 --http-alias=127.0.0.1:8900 --http-validate-host=false --access-control-allow-origin=* --access-control-allow-headers=true
     hostname: keosd
     ports:
       - 8900:8900
