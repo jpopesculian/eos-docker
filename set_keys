@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source active_key
+source owner_key
+source private_key

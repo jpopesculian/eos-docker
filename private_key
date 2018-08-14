@@ -1,0 +1,4 @@
+#!/bin/bash
+export private_key=$(cat .Pass | tail -n 1 | tr -d '"')
+echo $private_key | pbcopy
+echo $private_key
