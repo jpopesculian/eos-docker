@@ -4,14 +4,14 @@ I'm not promising this will all work on the first go, but if you read the script
 
 ## Setup
 
-#. Copy `aliases.bash` to your `~/.bashrc` or `~/.zshrc`
-#. Change the environment variables for `$EOS_HOME` and `$EOS_ACCOUNT`
-#. Run `setup`
+1. Copy `aliases.bash` to your `~/.bashrc` or `~/.zshrc`
+2. Change the environment variables for `$EOS_HOME` and `$EOS_ACCOUNT`
+3. Run `setup`
 
 ## Example Usage
 
-#. `eosio-init`
-#. `cd $EOS_HOME/contracts`
-#. `mkdir hello`
-#. `touch hello/hello.cpp` (and fill with code)
-#. Run `eosio-install hello/hello` to compile and load contract through docker
+1. `eosio-init`
+2. `cd $EOS_HOME/contracts`
+3. `mkdir hello`
+4. `touch hello/hello.cpp` (and fill with code)
+5. Run `eosio-install hello/hello` to compile and load contract through docker
