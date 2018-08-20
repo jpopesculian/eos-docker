@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# create wallet and save password
+cleos wallet create > .Pass
+
+# create owner and active keys
+cleos create key > .OwnerKeys
+cleos create key > .ActiveKeys
+
+# import eosio private key
+cleos wallet import --private-key=5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
+
+# set keys
+source set_keys
+
+# create account
+cleos create account eosio $EOS_USER $owner_key $active_key
