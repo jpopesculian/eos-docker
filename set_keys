@@ -1,5 +1,5 @@
 #!/bin/bash
 
-source active_key
-source owner_key
-source private_key
+source $EOS_HOME/active_key
+source $EOS_HOME/owner_key
+source $EOS_HOME/private_key
