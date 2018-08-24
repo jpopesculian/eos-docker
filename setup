@@ -4,11 +4,11 @@
 docker-compose up -d
 
 # create wallet and save password
-cleos wallet create > .Pass
+cleos wallet create --to-console > .Pass
 
 # create owner and active keys
-cleos create key > .OwnerKeys
-cleos create key > .ActiveKeys
+cleos create key --to-console > .OwnerKeys
+cleos create key --to-console > .ActiveKeys
 
 # import eosio private key
 cleos wallet import --private-key=5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3

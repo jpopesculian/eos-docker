@@ -6,7 +6,8 @@ alias eosio-exec='docker-compose -f $EOS_DOCKER_COMPOSE exec'
 alias eosio-up='docker-compose -f $EOS_DOCKER_COMPOSE up -d'
 alias cleos='docker-compose -f $EOS_DOCKER_COMPOSE exec keosd /opt/eosio/bin/cleos -u http://nodeosd:8888 --wallet-url http://localhost:8900'
 alias eosio-set-keys='source $EOS_HOME/set_keys'
-alias eosio-init='eosio-up && eosio-set-keys && cleos wallet open && cleos wallet unlock --password $private_key'
+alias eosio-unlock='eosio-set-keys && cleos wallet open && cleos wallet unlock --password $private_key'
+alias eosio-init='eosio-up && eosio-unlock'
 eosio-compile() { d=/contracts/usr; docker exec eos-dev_nodeosd_1 eosiocpp -o $d/$1.wast $d/$1.cpp; }
 eosio-abi() { d=/contracts/usr; docker exec eos-dev_nodeosd_1 eosiocpp -g $d/$1.abi $d/$1.cpp; }
 eosio-build() { eosio-compile $1 && eosio-abi $1 }
